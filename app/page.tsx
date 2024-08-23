@@ -16,6 +16,14 @@ export default function Home() {
 				<BlogCard />
 				<BlogCard />
 			</div>
+			<h2 className="text-[2rem] text-neutral-100 text-center mx-auto mt-[10vh]">
+				Newest{" "}
+			</h2>
+			<div className="flex px-12 gap-12 mt-8 mb-12">
+				<BlogCard />
+				<BlogCard />
+				<BlogCard />
+			</div>
 		</div>
 	);
 }
