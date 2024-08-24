@@ -17,10 +17,8 @@ export default async function RootLayout({
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
-	/* 	const currentUser = await getCurrentUser();
-	 */
+	const currentUser = await getCurrentUser();
 
-	const currentUser = null;
 	return (
 		<html lang="en">
 			<body className={inter.className}>

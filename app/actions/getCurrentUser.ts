@@ -20,8 +20,7 @@ export default async function getCurrentUser() {
 				email: session.user.email as string,
 			},
 			include: {
-				comments: true,
-				recipes: true,
+				blogs: true,
 			},
 		});
 

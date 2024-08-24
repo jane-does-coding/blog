@@ -45,7 +45,7 @@ export default function Index({ currentUser }) {
 								initial="initial"
 								animate="enter"
 								exit="exit"
-								onClick={() => router.push("/recipes/create")}
+								onClick={() => router.push("/blogs/create")}
 							>
 								<a>Create a blog</a>
 							</motion.button>
