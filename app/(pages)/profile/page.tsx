@@ -1,10 +1,15 @@
+import getCurrentUser from "@/app/actions/getCurrentUser";
+import getUserBlogs from "@/app/actions/getUserBlogs";
 import Profile from "@/app/components/Profile/Profile";
 import React from "react";
 
-const page = () => {
+const page = async () => {
+	const currentUser = await getCurrentUser();
+	const blogs = await getUserBlogs();
+
 	return (
 		<div>
-			<Profile />
+			<Profile blogs={blogs} currentUser={currentUser} />
 		</div>
 	);
 };

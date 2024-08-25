@@ -1,7 +1,7 @@
 import React from "react";
 import BlogCard from "../BlogCard";
 
-const Profile = () => {
+const Profile = ({ blogs, currentUser }: any) => {
 	return (
 		<div className="min-h-screen bg-neutral-950 pt-12">
 			<div className="flex flex-col">
@@ -11,9 +11,9 @@ const Profile = () => {
 					alt=""
 				/>
 				<h1 className="text-[1.35rem] text-center mx-auto flex items-center justify-center gap-2">
-					Name{" "}
+					{currentUser.name}
 					<span className="text-neutral-400 text-[1.25rem] font-light">
-						{"(username)"}
+						({currentUser.username})
 					</span>
 				</h1>
 				<h1 className="text-[1.35rem] text-center mx-auto flex items-center justify-center gap-2">
@@ -24,15 +24,10 @@ const Profile = () => {
 					Blogs Posted
 				</h1>
 
-				<div className="grid grid-cols-3 px-8 gap-[1rem]">
-					<BlogCard />
-					<BlogCard />
-					<BlogCard />
-					<BlogCard />
-					<BlogCard />
-					<BlogCard />
-					<BlogCard />
-					<BlogCard />
+				<div className="grid grid-cols-3 px-8 gap-[1rem] mb-20">
+					{blogs.map((blog: any, i: any) => (
+						<BlogCard key={i} />
+					))}
 				</div>
 			</div>
 		</div>

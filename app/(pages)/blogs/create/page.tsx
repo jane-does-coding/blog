@@ -1,10 +1,13 @@
+import getCurrentUser from "@/app/actions/getCurrentUser";
 import CreateBlog from "@/app/components/Blogs/CreateBlog";
 import React from "react";
 
-const page = () => {
+const page = async () => {
+	const currentUser = await getCurrentUser();
+
 	return (
 		<div>
-			<CreateBlog />
+			<CreateBlog currentUser={currentUser} />
 		</div>
 	);
 };
